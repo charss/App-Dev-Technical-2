@@ -18,19 +18,23 @@
 				return $base * $height;
 			}
 
-			function cylinder() {
-				return 
+			function cylinder($radius, $height) {
+				return pi() * ($radius^2) * $height
 			}
 
-			function pyramid() {
-
-			}
-
-			function cone() {
+			function pyramid($length, $width, $height) {
+				return ($length * $width * $height)) / 3;
 
 			}
 
-			function sphere() {
+
+			function cone($radius, $height) {
+				return pi() * ($radius^2) * ($height / 3);
+
+			}
+
+			function sphere($radius) {
+				return (4 / 3) * (pi() * $radius^3);
 
 			}
 		?>
