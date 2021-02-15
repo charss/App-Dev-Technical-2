@@ -4,10 +4,14 @@
 	
 }
 
+/*div {
+	border: 1px solid black;
+}*/
 .main {
 	padding-bottom: -20px;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
+
 .container {
 	
 	border: 1px solid black;
@@ -68,9 +72,33 @@ input[type='text'] {
 	transform: translate(-50%);
 }
 
+.answer {
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+	flex-grow: 5;
+}
+
 img {
 	width: 100px;
 	margin-top: 20px;
 	margin-left: 710px;
 	margin-bottom: 20px;
 }
+
+.answers {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 0.2fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	border: 1px solid black;
+}
+
+#resize {
+	width: 50%;	
+}
+.shape_values { grid-area: 1 / 1 / 2 / 3; }
+.volume_div { grid-area: 1 / 2 / 2 / 3; }

@@ -128,39 +128,57 @@
 			</div>
 		</form>
 
-
-		<div class='answers center'>
-			<?php
-				if (isset($_POST['submit'])) {
-					
-					$shape_params = $_POST['shape_params'];
-					// print_r($shape_params);
-					if ($shape == 'Cube') {
-						$volume = cube($shape_params);
-						printf("<p>Volume: %1\$.3f</p>", $volume);
-						// echo "<p>"; printf("\%.3f", %volume); echo "</p>";
-					} elseif ($shape == 'Right Prism') {
-						$volume = right_rect_prism($shape_params['width'], $shape_params['height'], $shape_params['length']);
-						printf("<p>Volume: %1\$.3f</p>", $volume);
-					} elseif ($shape == 'Prism') {
-						$volume = prism($shape_params['base'], $shape_params['height']);
-						printf("<p>Volume: %1\$.3f</p>", $volume);
-					} elseif ($shape == 'Cylinder') {
-						$volume = cylinder($shape_params['radius'], $shape_params['height']);
-						printf("<p>Volume: %1\$.3f</p>", $volume);
-					} elseif ($shape == 'Pyramid') {
-						$volume = pyramid($shape_params['length'], $shape_params['width'], $shape_params['height']);
-						printf("<p>Volume: %1\$.3f</p>", $volume);
-					} elseif ($shape == 'Cone') {
-						$volume = cone($shape_params['radius'], $shape_params['height']);
-						printf("<p>Volume: %1\$.3f</p>", $volume);
-					} elseif ($shape == 'Sphere') {
-						$volume = sphere($shape_params);
-						printf("<p>Volume: %1\$.3f</p>", $volume);
-					}
+		<?php
+			if (isset($_POST['submit'])) {
+				
+				$shape_params = $_POST['shape_params'];
+				// print_r($shape_params);
+				if ($shape == 'Cube') {
+					$volume = cube($shape_params);
+				} elseif ($shape == 'Right Prism') {
+					$volume = right_rect_prism($shape_params['width'], $shape_params['height'], $shape_params['length']);
+				} elseif ($shape == 'Prism') {
+					$volume = prism($shape_params['base'], $shape_params['height']);
+				} elseif ($shape == 'Cylinder') {
+					$volume = cylinder($shape_params['radius'], $shape_params['height']);
+				} elseif ($shape == 'Pyramid') {
+					$volume = pyramid($shape_params['length'], $shape_params['width'], $shape_params['height']);
+				} elseif ($shape == 'Cone') {
+					$volume = cone($shape_params['radius'], $shape_params['height']);
+				} elseif ($shape == 'Sphere') {
+					$volume = sphere($shape_params);
 				}
+		?>
+
+				<div class='answers center' id='resize'>
+					<div class='shape_values item'>
+						<!-- TODO: Print values individually and with labels -->
+						<?php 
+							if (!(in_array($shape, array('Cube', 'Sphere')))) {
+								foreach ($shape_params as $key => $item) {
+								    echo ucfirst($key).": $item <br>";
+								}
+							} elseif ($shape == 'Cube') {
+								echo "Side: $shape_params"; 
+							} elseif ($shape == 'Sphere') {
+								echo "Radius: $shape_params";
+							}
+							
+						?>
+
+					</div>
+					<div class='volume_div item'>
+						<!-- TODO: Fixed alignment and add design -->
+						<?php printf("<p>Volume: %1\$.3f</p>", $volume); ?>
+					</div>
+
+					
+				</div>
+			<?php
+			}
 			?>
-		</div>
+
+		
 
 
 			
