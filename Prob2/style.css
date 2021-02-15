@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+#picture {
+	width:  70px;
+	height: 70px;
+	object-fit: cover;
+	object-position: 50% 0%;
+	border-radius: 100%;
+	margin: 5px;
+}
+
+table {
+  	border-collapse: collapse;
+}
+
+
+th {
+	height: 30px;
+	font-family: "Barlow";
+	font-weight: 600;
+	font-size: 15px;
+	background-color: #9cad8e;
+	padding: 2px 12px 2px 12px;
+}
+
+td {
+	font-family: "Barlow";
+	font-weight: 400;
+	text-align: center;
+	border-bottom: 1px solid #dedede;
+	padding: 0px 10px 0px 10px;
+}
+
+#age_column {
+	text-align: center;
+}
+
+#count_column {
+	font-family: "Barlow";
+	font-weight: 400;
+	font-size: 12px;
+	text-align: center;
+	border-bottom: 0px;
+	padding: 0px;
+}
+
+#name_column {
+	padding-left: 10px;
+	text-align: left;
+	font-weight: bold;
+}
+
+#img_column {
+	padding: 0px;
+}
+
+
+.dropdown_button {
+	background-color: transparent;
+	border: none;
+	font-family: "Barlow";
+	font-weight: 600;
+	font-size: 15px;
+	height: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.dropdown_cont {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	z-index: 1;
+}
+
+.dropdown_cont a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown_cont a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-cont {
+	display: block;
+}
+
+.dropdown:hover .dropdown_button {
+	background-color:#7b8a70;
+}
+
+#down_arrow {
+	width:  10px;
+	height: 10px;
+	margin-left: 5px;
+}
