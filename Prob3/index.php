@@ -3,40 +3,35 @@
 <html>
 	<head>
 	</head>
+	<link rel='stylesheet' href='style.css'>
 	<body>
-		<?php
+		<div class='main'>
+			<form action="" 
+			<div class="container">
+				<div class="div1 grid"> 
+					<input type='button' name='cube' value='Cube'>
+				</div>
+				<div class="div2 grid">
+					<input type='button' name='RRP' value='Right Rectangular Prism'>
+				</div>
+				<div class="div3 grid">
+					<input type='button' name='prism' value='Prism'>
+				</div>
+				<div class="div4 grid">
+					<input type='button' name='cylinder' value='Cylinder'>
+				</div>
+				<div class="div5 grid">
+					<input type='button' name='pyramid' value='Pyramid'>
+				</div>
+				<div class="div6 grid">
+					<input type='button' name='cone' value='Cone'>
+				</div>
+				<div class="div7 grid">
+					<input type='button' name='sphere' value='Sphere'>
+				</div>
+			</div>
+		</div>
+		
 
-			function cube($side) {
-				return $side ^ 3;
-			}
-
-			function right_rect_prism($width, $height, $length) {
-				return $width * $height * $length;
-			}
-
-			function prism($base, $height) {
-				return $base * $height;
-			}
-
-			function cylinder($radius, $height) {
-				return pi() * ($radius^2) * $height
-			}
-
-			function pyramid($length, $width, $height) {
-				return ($length * $width * $height)) / 3;
-
-			}
-
-
-			function cone($radius, $height) {
-				return pi() * ($radius^2) * ($height / 3);
-
-			}
-
-			function sphere($radius) {
-				return (4 / 3) * (pi() * $radius^3);
-
-			}
-		?>
 	</body>
 </html>
