@@ -31,10 +31,13 @@ td {
 	padding: 0px 10px 0px 10px;
 }
 
-#age_column {
+#desc_column {
 	text-align: center;
 }
 
+#fact_column {
+	text-align: left;
+}
 #count_column {
 	font-family: "Barlow";
 	font-weight: 400;
