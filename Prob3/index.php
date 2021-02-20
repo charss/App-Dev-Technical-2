@@ -1,5 +1,3 @@
-<!-- Create a formula for each volume of shapes (Cube, Right Rectangular Prism, Prism or Cylinder, Pyramid or Cone and Sphere) then display the result. Please see the sample below: -->
-
 <html>
 	<head>
 	</head>
@@ -122,17 +120,13 @@
 							calc_button();
 						}
 					?>
-
-					
 				</div>
 			</div>
 		</form>
 
 		<?php
 			if (isset($_POST['submit'])) {
-				
 				$shape_params = $_POST['shape_params'];
-				// print_r($shape_params);
 				if ($shape == 'Cube') {
 					$volume = cube($shape_params);
 				} elseif ($shape == 'Right Prism') {
@@ -152,38 +146,25 @@
 
 				<div class='answers center' id='resize'>
 					<div class='shape_values item'>
-						<!-- TODO: Print values individually and with labels -->
 						<?php 
 							if (!(in_array($shape, array('Cube', 'Sphere')))) {
 								foreach ($shape_params as $key => $item) {
-								    echo ucfirst($key).": $item <br>";
+								    echo ucfirst($key)." = $item <br>";
 								}
 							} elseif ($shape == 'Cube') {
-								echo "Side: $shape_params"; 
+								echo "Side = $shape_params"; 
 							} elseif ($shape == 'Sphere') {
-								echo "Radius: $shape_params";
+								echo "Radius = $shape_params";
 							}
-							
 						?>
 
 					</div>
 					<div class='volume_div item'>
-						<!-- TODO: Fixed alignment and add design -->
-						<?php printf("<p>Volume: %1\$.3f</p>", $volume); ?>
+						<?php printf("<p>Volume = %1\$.3f</p>", $volume); ?>
 					</div>
-
-					
 				</div>
 			<?php
 			}
 			?>
-
-		
-
-
-			
-		
-		
-
 	</body>
 </html>

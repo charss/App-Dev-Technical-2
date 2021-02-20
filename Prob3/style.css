@@ -14,7 +14,7 @@
 
 .container {
 	
-	border: 1px solid black;
+	
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
 	grid-template-rows: repeat(1, 1fr);
@@ -84,21 +84,23 @@ input[type='text'] {
 img {
 	width: 100px;
 	margin-top: 20px;
-	margin-left: 710px;
+	margin-left: 40%;
 	margin-bottom: 20px;
 }
 
 .answers {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 0.2fr;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
-	border: 1px solid black;
+	display: flex;
 }
 
 #resize {
-	width: 50%;	
+	width: 40%;	
 }
-.shape_values { grid-area: 1 / 1 / 2 / 3; }
-.volume_div { grid-area: 1 / 2 / 2 / 3; }
+
+.shape_values { 
+	border: 1px solid black;
+	text-align: center;
+}
+.volume_div { 
+	text-align: center;
+	border: 1px solid black;
+}

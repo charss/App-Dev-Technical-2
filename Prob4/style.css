@@ -1,14 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+	font-family: 'Montserrat';
+	font-size: 12px;
+}
 .parent {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(6, 1fr);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
-	text-align: center
+	text-align: center;
+	height: 300px;
+	width: 500px;
 }
 
 .page {
 	border: 1px solid black;
+}
+
+p {
+	text-align: left;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 3; }
@@ -18,3 +30,11 @@
 .div5 { grid-area: 4 / 1 / 5 / 6; }
 .div6 { grid-area: 5 / 1 / 6 / 6; }
 .div7 { grid-area: 6 / 1 / 7 / 6; }
+
+img {
+	width: 100px;
+}
+
+span {
+	font-weight: bold;
+}
